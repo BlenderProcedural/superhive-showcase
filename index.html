@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>More from Blender Procedural</title>
+<meta name="description" content="Procedural generators, physics and VFX add-ons for Blender by Blender Procedural on Superhive.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://assets.superhivemarket.com">
+<style>
+  /* Everything is sized in rem and 1rem = viewport width / 47.5 (16px at 760px, capped at 20px), so the widget
+     keeps one aspect ratio and an iframe with a fixed aspect-ratio always fits it. */
+  html { font-size: clamp(9px, calc(100vw / 47.5), 20px); }
+  :root {
+    --bg: #0d0f14; --panel: #151922; --panel-2: #1b2030; --line: rgba(255,255,255,.08); --ink: #f3f5f9;
+    --muted: #9aa3b5; --accent: #ff8a3d; --accent-2: #ff4f7b; --accent-3: #8b5cff; --ok: #39d98a;
+    --r: .9rem; --grad: linear-gradient(110deg, var(--accent), var(--accent-2) 55%, var(--accent-3));
+  }
+  :root.light {
+    --bg: #ffffff; --panel: #f4f6fa; --panel-2: #eaedf4; --line: rgba(15,20,30,.09); --ink: #141821; --muted: #5e6677;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: transparent; }
+  body { font: 500 1rem/1.4 Inter, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: var(--ink);
+         -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  .sc { position: relative; overflow: hidden; background: var(--bg); border-radius: 1.25rem; padding: 1rem 1rem 1.05rem;
+        border: 1px solid var(--line); isolation: isolate; height: 35rem; display: flex; flex-direction: column; gap: .8rem; }
+  .sc::before { content: ""; position: absolute; inset: -40% -10% auto auto; width: 30rem; height: 30rem; z-index: -1;
+                background: radial-gradient(closest-side, rgba(255,79,123,.22), transparent 70%); filter: blur(10px);
+                animation: drift 14s ease-in-out infinite alternate; }
+  .sc::after { content: ""; position: absolute; inset: auto auto -45% -15%; width: 28rem; height: 28rem; z-index: -1;
+               background: radial-gradient(closest-side, rgba(139,92,255,.2), transparent 70%); filter: blur(10px);
+               animation: drift 18s ease-in-out infinite alternate-reverse; }
+  :root.light .sc::before, :root.light .sc::after { opacity: .5; }
+  @keyframes drift { to { transform: translate(-3rem, 2.5rem) scale(1.1); } }
+
+  /* header */
+  .top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 2.75rem; flex: none; }
+  .brand { display: flex; align-items: center; gap: .65rem; min-width: 0; }
+  .av { width: 2.6rem; height: 2.6rem; border-radius: 50%; object-fit: cover; flex: none;
+        box-shadow: 0 0 0 .14rem var(--bg), 0 0 0 .26rem var(--accent-2); background: var(--panel); }
+  .brand b { display: block; font-size: 1.05rem; font-weight: 800; letter-spacing: -.01em; }
+  .brand span { display: block; font-size: .72rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .eyebrow { font-size: .62rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+             background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .btn { display: inline-flex; align-items: center; gap: .4rem; flex: none; padding: .55rem 1rem; border-radius: 999px;
+         font-size: .8rem; font-weight: 700; color: #fff; background: var(--grad); background-size: 160% 100%;
+         box-shadow: 0 .35rem 1.2rem rgba(255,79,123,.35); transition: background-position .4s, transform .2s; }
+  .btn:hover { background-position: 100% 0; transform: translateY(-1px); }
+  .btn svg { width: .85rem; height: .85rem; }
+
+  /* hero: spotlight + new releases */
+  .hero { display: grid; grid-template-columns: 1.62fr 1fr; gap: .8rem; height: 16.5rem; flex: none; }
+  .spot { position: relative; border-radius: var(--r); overflow: hidden; background: var(--panel); }
+  .slide { position: absolute; inset: 0; opacity: 0; transition: opacity .7s ease; pointer-events: none; }
+  .slide.on { opacity: 1; pointer-events: auto; }
+  .slide img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1.06);
+               transition: transform 6s ease; }
+  .slide.on img { transform: scale(1); }
+  .slide::after { content: ""; position: absolute; inset: 0;
+                  background: linear-gradient(0deg, rgba(8,10,14,.92) 0%, rgba(8,10,14,.55) 38%, rgba(8,10,14,0) 68%); }
+  .slide .txt { position: absolute; left: 1rem; right: 1rem; bottom: .95rem; z-index: 1; color: #fff; }
+  .slide h3 { margin: .35rem 0 .2rem; font-size: 1.3rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.15;
+              display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; max-width: 85%; }
+  .meta { display: flex; align-items: center; gap: .5rem; font-size: .78rem; color: #cfd5e2; }
+  .price { font-weight: 800; color: #fff; }
+  .old { text-decoration: line-through; opacity: .6; font-weight: 600; }
+  .cta { position: absolute; right: 1rem; bottom: 1rem; z-index: 1; display: inline-flex; align-items: center; gap: .35rem;
+         padding: .45rem .8rem; border-radius: 999px; background: rgba(255,255,255,.14); backdrop-filter: blur(8px);
+         color: #fff; font-size: .74rem; font-weight: 700; border: 1px solid rgba(255,255,255,.22); transition: background .25s; }
+  .slide:hover .cta { background: rgba(255,255,255,.26); }
+  .tags { display: flex; gap: .3rem; flex-wrap: wrap; }
+  .tag { font-size: .6rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; padding: .2rem .45rem;
+         border-radius: .35rem; background: rgba(255,255,255,.16); color: #fff; backdrop-filter: blur(6px); }
+  .tag.hot { background: var(--grad); }
+  .tag.sale { background: #ff4f5e; }
+  .tag.new { background: #2f80ff; }
+  .tag.free { background: var(--ok); color: #062a18; }
+  .dots { position: absolute; top: .8rem; right: .9rem; z-index: 2; display: flex; gap: .3rem; }
+  .dots button { width: .45rem; height: .45rem; border-radius: 999px; border: 0; padding: 0; cursor: pointer;
+                 background: rgba(255,255,255,.4); transition: width .3s, background .3s; }
+  .dots button.on { width: 1.3rem; background: #fff; }
+  .bar { position: absolute; left: 0; top: 0; height: .18rem; width: 0; z-index: 2; background: var(--grad); }
+  .bar.run { animation: fill var(--dur, 5.5s) linear forwards; }
+  .spot:hover .bar.run { animation-play-state: paused; }
+  @keyframes fill { to { width: 100%; } }
+
+  .side { border-radius: var(--r); background: var(--panel); border: 1px solid var(--line); padding: .75rem;
+          display: flex; flex-direction: column; gap: .5rem; min-width: 0; }
+  .side h4 { margin: 0 0 .1rem; font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+             color: var(--muted); display: flex; align-items: center; gap: .4rem; }
+  .side h4 i { width: .45rem; height: .45rem; border-radius: 50%; background: #2f80ff; box-shadow: 0 0 .6rem #2f80ff;
+               animation: pulse 1.8s ease-in-out infinite; }
+  @keyframes pulse { 50% { opacity: .35; } }
+  .row { display: grid; grid-template-columns: 5.2rem 1fr; gap: .55rem; align-items: center; padding: .25rem;
+         border-radius: .6rem; transition: background .2s, transform .2s; }
+  .row:hover { background: var(--panel-2); transform: translateX(.15rem); }
+  .row img { width: 5.2rem; height: 2.6rem; object-fit: cover; border-radius: .45rem; background: var(--panel-2); }
+  .row b { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: .74rem;
+           line-height: 1.2; font-weight: 700; }
+  .row span { font-size: .68rem; color: var(--muted); }
+
+  /* filters */
+  .tools { display: flex; align-items: center; gap: .6rem; height: 2rem; flex: none; }
+  .chips { display: flex; gap: .35rem; overflow-x: auto; scrollbar-width: none; flex: 1; mask: linear-gradient(90deg, #000 92%, transparent); }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip { flex: none; font: inherit; font-size: .72rem; font-weight: 700; padding: .35rem .7rem; border-radius: 999px; cursor: pointer;
+          color: var(--muted); background: var(--panel); border: 1px solid var(--line); transition: all .2s; white-space: nowrap; }
+  .chip small { opacity: .65; font-weight: 600; margin-left: .2rem; }
+  .chip:hover { color: var(--ink); }
+  .chip.on { color: #fff; background: var(--grad); border-color: transparent; }
+  .search { position: relative; flex: none; width: 11rem; }
+  .search input { width: 100%; font: inherit; font-size: .72rem; padding: .42rem .7rem .42rem 1.75rem; border-radius: 999px;
+                  border: 1px solid var(--line); background: var(--panel); color: var(--ink); outline: none; transition: border .2s; }
+  .search input:focus { border-color: var(--accent-2); }
+  .search svg { position: absolute; left: .6rem; top: 50%; width: .8rem; height: .8rem; transform: translateY(-50%); color: var(--muted); }
+
+  /* product rail */
+  .rail { position: relative; flex: 1; min-height: 0; }
+  .track { display: flex; gap: .65rem; overflow-x: auto; scrollbar-width: none; height: 100%; padding: .1rem .1rem .2rem;
+           mask: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent); }
+  .track::-webkit-scrollbar { display: none; }
+  .card { flex: none; width: 10.6rem; border-radius: .75rem; background: var(--panel); border: 1px solid var(--line);
+          overflow: hidden; display: flex; flex-direction: column; transition: transform .25s, border-color .25s, box-shadow .25s; }
+  .card:hover { transform: translateY(-.2rem); border-color: rgba(255,138,61,.55); box-shadow: 0 .6rem 1.4rem rgba(0,0,0,.35); }
+  .thumb { position: relative; width: 100%; aspect-ratio: 2 / 1; background: var(--panel-2); overflow: hidden; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+  .card:hover .thumb img { transform: scale(1.06); }
+  .thumb .tags { position: absolute; left: .35rem; top: .35rem; }
+  .body { padding: .45rem .55rem .5rem; display: flex; flex-direction: column; gap: .25rem; flex: 1; }
+  .body b { font-size: .72rem; line-height: 1.22; font-weight: 700; display: -webkit-box; -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical; overflow: hidden; min-height: 1.76rem; }
+  .body .meta { font-size: .66rem; color: var(--muted); justify-content: space-between; margin-top: auto; }
+  .body .price { color: var(--ink); }
+  .nav { position: absolute; top: 50%; z-index: 3; width: 2rem; height: 2rem; margin-top: -1rem; border-radius: 50%;
+         border: 1px solid var(--line); background: rgba(20,24,33,.82); color: #fff; cursor: pointer; display: grid;
+         place-items: center; backdrop-filter: blur(6px); opacity: 0; transition: opacity .25s; }
+  :root.light .nav { background: rgba(255,255,255,.9); color: var(--ink); }
+  .rail:hover .nav { opacity: 1; }
+  .nav svg { width: .9rem; height: .9rem; }
+  .prev { left: -.2rem; } .next { right: -.2rem; }
+  .empty { margin: auto; color: var(--muted); font-size: .8rem; }
+  .foot { position: absolute; right: 1rem; bottom: .3rem; font-size: .55rem; color: var(--muted); opacity: .7; }
+
+  @media (max-width: 480px) {
+    .hero { grid-template-columns: 1fr; height: auto; }
+    .side { display: none; }
+    .spot { height: 15rem; }
+    .search { width: 8rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="sc" id="sc">
+  <header class="top">
+    <a class="brand" id="brand" target="_top" rel="noopener">
+      <img class="av" id="avatar" alt="">
+      <div><div class="eyebrow">More from the creator</div><b id="cname">Blender Procedural</b><span id="tagline"></span></div>
+    </a>
+    <a class="btn" id="store" target="_top" rel="noopener">Visit the store
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+  </header>
+  <section class="hero">
+    <div class="spot" id="spot"><div class="bar" id="bar"></div><div class="dots" id="dots"></div></div>
+    <aside class="side"><h4><i></i>New releases</h4><div id="newlist" style="display:grid;gap:.35rem"></div></aside>
+  </section>
+  <nav class="tools">
+    <div class="chips" id="chips"></div>
+    <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search products" autocomplete="off"></label>
+  </nav>
+  <div class="rail" id="rail">
+    <button class="nav prev" id="prev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <div class="track" id="track"></div>
+    <button class="nav next" id="next" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+  </div>
+  <div class="foot" id="foot"></div>
+</div>
+<script>
+(async function () {
+  const qs = new URLSearchParams(location.search);
+  if (qs.get('theme') === 'light') document.documentElement.classList.add('light');
+  const exclude = new Set((qs.get('exclude') || '').split(',').map(s => s.trim()).filter(Boolean));
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+  const NICE = {'Addons': 'Add-ons', 'Modifier Setups': 'Geometry Nodes', 'Render Setups': 'Render setups'};
+
+  let data;
+  try { data = await (await fetch('data/products.json', {cache: 'no-cache'})).json(); }
+  catch (e) { $('track').innerHTML = '<div class="empty">Could not load products.</div>'; return; }
+
+  const all = data.products.filter(p => !exclude.has(p.slug));
+  const hot = new Set(data.featured || []);
+  const storeUrl = data.creator.url;
+  $('brand').href = storeUrl; $('store').href = storeUrl;
+  $('cname').textContent = data.creator.name;
+  $('avatar').src = data.creator.avatar;
+  $('tagline').textContent = `${data.count} tools for Blender · ${data.creator.tagline || ''}`.replace(/ · $/, '');
+  $('q').placeholder = `Search ${all.length} products`;
+
+  const tags = (p, max = 3) => {
+    const t = [];
+    if (hot.has(p.slug)) t.push('<span class="tag hot">Bestseller</span>');
+    if (p.new) t.push('<span class="tag new">New</span>');
+    if (p.free) t.push('<span class="tag free">Free</span>');
+    else if (p.sale) t.push(`<span class="tag sale">${esc(p.sale.replace(/\s+/g, ''))}</span>`);
+    return t.slice(0, max).join('');
+  };
+  const price = p => p.free ? '<span class="price">Free</span>'
+    : `${p.price_old ? `<span class="old">${esc(p.price_old)}</span>` : ''}<span class="price">${esc(p.price)}</span>`;
+  const cat = p => esc(NICE[p.category] || p.category);
+
+  // spotlight: featured order first, then the newest
+  const bySlug = Object.fromEntries(all.map(p => [p.slug, p]));
+  let spot = (data.featured || []).map(s => bySlug[s]).filter(Boolean);
+  for (const p of [...all].sort((a, b) => b.id - a.id)) if (spot.length < 8 && !spot.includes(p)) spot.push(p);
+  spot = spot.slice(0, 8);
+  $('spot').insertAdjacentHTML('beforeend', spot.map((p, i) => `
+    <a class="slide${i === 0 ? ' on' : ''}" href="${esc(p.url)}" target="_top" rel="noopener">
+      <img src="${esc(p.image)}" alt="${esc(p.title)}" ${i ? 'loading="lazy"' : 'fetchpriority="high"'}>
+      <div class="txt"><div class="tags">${tags(p)}</div><h3>${esc(p.title)}</h3>
+        <div class="meta"><span>${cat(p)}</span><span>·</span>${price(p)}</div></div>
+      <span class="cta">View product <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>`).join(''));
+  $('dots').innerHTML = spot.map((_, i) => `<button class="${i === 0 ? 'on' : ''}" aria-label="Show product ${i + 1}"></button>`).join('');
+  const slides = [...document.querySelectorAll('.slide')], dots = [...$('dots').children], bar = $('bar');
+  let cur = 0, timer = null, paused = false;
+  const DUR = 5500;
+  function show(i) {
+    slides[cur].classList.remove('on'); dots[cur].classList.remove('on');
+    cur = (i + slides.length) % slides.length;
+    slides[cur].classList.add('on'); dots[cur].classList.add('on');
+    const nxt = slides[(cur + 1) % slides.length].querySelector('img'); nxt.loading = 'eager';
+    bar.classList.remove('run'); void bar.offsetWidth; if (!reduce) bar.classList.add('run');
+    schedule();
+  }
+  function schedule() { clearTimeout(timer); if (!reduce) timer = setTimeout(() => paused ? schedule() : show(cur + 1), DUR); }
+  dots.forEach((d, i) => d.addEventListener('click', e => { e.preventDefault(); show(i); }));
+  $('spot').addEventListener('mouseenter', () => paused = true);
+  $('spot').addEventListener('mouseleave', () => paused = false);
+  let sx = null;
+  $('spot').addEventListener('touchstart', e => sx = e.touches[0].clientX, {passive: true});
+  $('spot').addEventListener('touchend', e => { if (sx === null) return; const dx = e.changedTouches[0].clientX - sx;
+    if (Math.abs(dx) > 40) show(cur + (dx < 0 ? 1 : -1)); sx = null; });
+  bar.style.setProperty('--dur', DUR + 'ms'); show(0);
+
+  // new releases
+  const fresh = [...all].sort((a, b) => b.id - a.id).slice(0, 4);
+  $('newlist').innerHTML = fresh.map(p => `
+    <a class="row" href="${esc(p.url)}" target="_top" rel="noopener">
+      <img src="${esc(p.image)}" alt="" loading="lazy">
+      <div><b>${esc(p.title)}</b><span>${cat(p)} · ${p.free ? 'Free' : esc(p.price)}</span></div>
+    </a>`).join('');
+
+  // filters
+  const counts = {};
+  all.forEach(p => counts[p.category] = (counts[p.category] || 0) + 1);
+  const filters = [['all', 'All', all.length]]
+    .concat([['hot', 'Bestsellers', all.filter(p => hot.has(p.slug)).length]])
+    .concat(Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([c, n]) => ['c:' + c, NICE[c] || c, n]))
+    .concat([['sale', 'On sale', all.filter(p => p.sale).length], ['free', 'Free', all.filter(p => p.free).length]])
+    .filter(f => f[2] > 0);
+  let filter = 'all', query = '';
+  $('chips').innerHTML = filters.map(([k, label, n]) =>
+    `<button class="chip${k === 'all' ? ' on' : ''}" data-k="${esc(k)}">${esc(label)}<small>${n}</small></button>`).join('');
+  $('chips').addEventListener('click', e => {
+    const b = e.target.closest('.chip'); if (!b) return;
+    document.querySelectorAll('.chip').forEach(c => c.classList.toggle('on', c === b));
+    filter = b.dataset.k; render();
+  });
+  $('q').addEventListener('input', e => { query = e.target.value.trim().toLowerCase(); render(); });
+
+  // rail
+  const track = $('track');
+  const card = p => `
+    <a class="card" href="${esc(p.url)}" target="_top" rel="noopener" title="${esc(p.title)}">
+      <div class="thumb"><img src="${esc(p.image)}" alt="" loading="lazy"><div class="tags">${tags(p, 2)}</div></div>
+      <div class="body"><b>${esc(p.title)}</b><div class="meta"><span>${cat(p)}</span><span>${price(p)}</span></div></div>
+    </a>`;
+  let loop = false;
+  function list() {
+    return all.filter(p => (filter === 'all' || (filter === 'hot' && hot.has(p.slug)) || (filter === 'sale' && p.sale)
+      || (filter === 'free' && p.free) || filter === 'c:' + p.category)
+      && (!query || p.title.toLowerCase().includes(query) || (p.category || '').toLowerCase().includes(query)));
+  }
+  function render() {
+    const items = list();
+    if (!items.length) { track.innerHTML = '<div class="empty">No products match.</div>'; loop = false; return; }
+    const html = items.map(card).join('');
+    track.innerHTML = html;
+    loop = track.scrollWidth > track.clientWidth * 1.5 && !query;
+    if (loop) track.insertAdjacentHTML('beforeend', html);   // second copy for a seamless loop
+    track.scrollLeft = 0;
+  }
+  render();
+
+  // gentle auto-scroll that yields to the visitor
+  let hold = 0, last = performance.now(), acc = 0;
+  const pause = ms => hold = performance.now() + ms;
+  ['mouseenter', 'touchstart', 'focusin', 'wheel'].forEach(ev => $('rail').addEventListener(ev, () => pause(1e9), {passive: true}));
+  ['mouseleave', 'touchend', 'focusout'].forEach(ev => $('rail').addEventListener(ev, () => pause(2500), {passive: true}));
+  function tick(now) {
+    const dt = Math.min(now - last, 60); last = now;
+    if (!reduce && loop && now > hold && !document.hidden) {
+      acc += dt * 0.028 * (innerWidth / 760);
+      if (acc >= 1) { const step = Math.floor(acc); acc -= step; track.scrollLeft += step;
+        const half = track.scrollWidth / 2; if (track.scrollLeft >= half) track.scrollLeft -= half; }
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+  const jump = dir => { pause(4000); track.scrollBy({left: dir * track.clientWidth * 0.8, behavior: 'smooth'}); };
+  $('prev').addEventListener('click', () => jump(-1));
+  $('next').addEventListener('click', () => jump(1));
+
+  const d = new Date(data.updated);
+  $('foot').textContent = `Updated ${d.toISOString().slice(0, 10)}`;
+})();
+</script>
+</body>
+</html>
