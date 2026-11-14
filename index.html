@@ -23,6 +23,9 @@
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; background: transparent; }
+  /* the iframe's aspect-ratio matches the widget; rounding can leave it a pixel short, so never show a scrollbar
+     while the widget scales (narrow phones, where the font floor kicks in, may still scroll) */
+  @media (min-width: 430px) { html, body { overflow: hidden; } }
   body { font: 500 1rem/1.4 Inter, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: var(--ink);
          -webkit-font-smoothing: antialiased; }
   a { color: inherit; text-decoration: none; }
