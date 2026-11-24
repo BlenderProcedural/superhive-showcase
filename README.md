@@ -1,19 +1,20 @@
 # Blender Procedural – Superhive Showcase
 
 A self-updating storefront widget for the [Blender Procedural store on Superhive](https://superhivemarket.com/creators/pamir-bal).
-Each product description embeds it with an iframe, so a visitor who opens one product can find the others.
+Each product description embeds it with an iframe, so a visitor who opens one product finds the store's best work.
 
 **Live:** https://blenderprocedural.github.io/superhive-showcase/
 
 ## What it shows
 
 - **Header:** the store's avatar and name, the live product count, and a *Visit the store* button.
-- **Spotlight:** bestsellers and new products rotate automatically. Each slide has a progress bar, dots and
-  swipe support, and shows its badges (Bestseller, New, sale percentage, Free).
-- **New releases:** the four newest products.
-- **Filters:** All, Bestsellers, each category, On sale and Free, plus a search box.
-- **Product rail:** every product as a card. The rail scrolls gently on its own and stops when the visitor uses it.
+- **Hero:** the *Ultimate Blender Addons Bundle*, large, with its live price, discount, savings, sales count, rating and a
+  *Get the bundle* button.
+- **Bestsellers:** a curated rail of the store's best-selling products, ranked, with sales and sale badges. It scrolls
+  gently on its own and stops when the visitor uses it; the arrows step through it.
 - **Links:** every link opens on Superhive in the same tab (`target="_top"`), so the visitor stays in the store.
+
+Only the products listed in `config.json` are shown. Everything else stays reachable through *Visit the store*.
 
 ## Embed in a Superhive product description
 
@@ -31,7 +32,7 @@ column width. Superhive keeps this style; `height` is only a fallback.
 
 | Option | Example | Effect |
 |---|---|---|
-| `exclude` | `?exclude=mechify` or `?exclude=a,b` | Hides these products everywhere |
+| `exclude` | `?exclude=mechify` or `?exclude=a,b` | Hides these products; on the bundle's own page the next hero takes its place |
 | `theme` | `?theme=light` | Light colour scheme |
 
 ## How it stays up to date
@@ -41,12 +42,13 @@ Superhive* > *Run workflow*). The script:
 
 1. reads the public store pages, with no login needed;
 2. takes each product's title, price, sale price, badge, category and image;
-3. writes `data/products.json`.
+3. opens the page of every hero and pick product for its sales count, rating and large image;
+4. writes `data/products.json`.
 
 GitHub Pages republishes the widget after each commit.
 
 If a run finds far fewer products than the last good file, it keeps the old data and fails, so a site hiccup
-never empties the widget.
+never empties the widget. If one product page can't be read, that product keeps yesterday's numbers.
 
 ## Settings
 
@@ -54,7 +56,11 @@ never empties the widget.
 
 - **creator_slug:** the store to read.
 - **tagline:** the line under the store name.
-- **featured:** the product slugs, in order, that lead the spotlight and get the *Bestseller* badge.
-- **new_count:** how many of the newest products get the *New* badge.
+- **hero:** the big product on top. The first entry that isn't the current page is shown. Each entry has `slug`,
+  `headline` (wrap words in `*stars*` to colour them), `kicker`, `eyebrow` and `cta`.
+- **picks:** the product slugs, in order, for the bestseller rail. Add or remove slugs here to change what is shown.
+- **new_days:** a pick published within this many days gets the *New* badge.
+
+Star ratings appear only when they help (4.0 or more, from at least 3 reviews).
 
 To run the sync locally: `python scripts/sync.py`. It uses only the standard library.

@@ -2,21 +2,39 @@
   "creator_slug": "pamir-bal",
   "creator_name": "Blender Procedural",
   "tagline": "Procedural generators, physics & VFX add-ons",
-  "new_count": 4,
-  "featured": [
-    "stylized-city-generator",
+  "new_days": 60,
+  "hero": [
+    {
+      "slug": "blender-addons-bundle",
+      "headline": "Ultimate *Blender Addons* Bundle",
+      "kicker": "50+ add-ons in one bundle",
+      "eyebrow": "🔥 Best value",
+      "cta": "Get the bundle"
+    },
+    {
+      "slug": "simulation-addons-bundle",
+      "headline": "Ultimate *Simulation & Dynamics* Bundle",
+      "kicker": "Physics and simulation add-ons in one bundle",
+      "eyebrow": "🔥 Best value",
+      "cta": "Get the bundle"
+    }
+  ],
+  "picks": [
+    "mechify",
+    "ocean-physics-pro",
+    "vehicle-physics-pro",
+    "blend-online",
+    "autodepth-ai",
+    "aquaflow-pro",
+    "physics-placer",
+    "blenderailibrary",
+    "knitting-generator-addon",
     "video-depth-ai",
     "auto-painter-ai",
     "bp-geogen-ultimate-generators-bundle",
     "fluffy-maker",
     "curve-fluids",
-    "blender-inflate-addon----generate-dynamic-cloth-panels",
     "easy-wake",
-    "procedural-medieval-castle-generator",
-    "imperfectit-instant-realism",
-    "wind-fx",
-    "mechify",
-    "vehicle-physics-pro",
-    "ocean-physics-pro"
+    "blender-inflate-addon----generate-dynamic-cloth-panels"
   ]
 }

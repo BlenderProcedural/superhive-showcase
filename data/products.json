@@ -1,29 +1,61 @@
 {
- "updated": "2026-11-24T14:52:10+00:00",
+ "updated": "2026-11-24T22:44:33+00:00",
  "creator": {
   "name": "Blender Procedural",
   "url": "https://superhivemarket.com/creators/pamir-bal",
   "avatar": "https://assets.superhivemarket.com/store/user/5663967/avatar/thumb-dddf1b9b7e622b22c50ff495f4cab27c.png",
   "tagline": "Procedural generators, physics & VFX add-ons"
  },
- "count": 134,
- "featured": [
-  "stylized-city-generator",
+ "count": 135,
+ "hero": [
+  {
+   "slug": "blender-addons-bundle",
+   "headline": "Ultimate *Blender Addons* Bundle",
+   "kicker": "50+ add-ons in one bundle",
+   "eyebrow": "🔥 Best value",
+   "cta": "Get the bundle"
+  },
+  {
+   "slug": "simulation-addons-bundle",
+   "headline": "Ultimate *Simulation & Dynamics* Bundle",
+   "kicker": "Physics and simulation add-ons in one bundle",
+   "eyebrow": "🔥 Best value",
+   "cta": "Get the bundle"
+  }
+ ],
+ "picks": [
+  "mechify",
+  "ocean-physics-pro",
+  "vehicle-physics-pro",
+  "blend-online",
+  "autodepth-ai",
+  "aquaflow-pro",
+  "physics-placer",
+  "blenderailibrary",
+  "knitting-generator-addon",
   "video-depth-ai",
   "auto-painter-ai",
   "bp-geogen-ultimate-generators-bundle",
   "fluffy-maker",
   "curve-fluids",
-  "blender-inflate-addon----generate-dynamic-cloth-panels",
   "easy-wake",
-  "procedural-medieval-castle-generator",
-  "imperfectit-instant-realism",
-  "wind-fx",
-  "mechify",
-  "vehicle-physics-pro",
-  "ocean-physics-pro"
+  "blender-inflate-addon----generate-dynamic-cloth-panels"
  ],
  "products": [
+  {
+   "slug": "lithos-terrain",
+   "id": 271297,
+   "title": "Lithos Terrain | GPU Powered Node Based Terrain Generator [80% Off Launch Sale]",
+   "url": "https://superhivemarket.com/products/lithos-terrain",
+   "price": "$3.00-$10.00",
+   "sale": "- 80%",
+   "on_sale": true,
+   "category": "Addons",
+   "category_slug": "addons",
+   "image": "https://assets.superhivemarket.com/store/product/271297/image/medium-cfdab5b0b7f38d9710d255d091b02892.png",
+   "price_old": "",
+   "free": false
+  },
   {
    "slug": "ocean-physics-pro",
    "id": 268485,
@@ -37,6 +69,11 @@
    "image": "https://assets.superhivemarket.com/store/product/268485/image/medium-ea15067b64860c5b20c170b796e8f541.jpeg",
    "price_old": "",
    "free": false,
+   "sales": "60+",
+   "rating": 5.0,
+   "reviews": 4,
+   "image_hd": "https://assets.superhivemarket.com/store/product/268485/image/xlarge-523615ecb71f084c7ad23cf4200444b3.jpeg",
+   "age_days": 19,
    "new": true
   },
   {
@@ -52,6 +89,11 @@
    "image": "https://assets.superhivemarket.com/store/product/268479/image/medium-c10860ca434df5bfd4421ac9ab2bacc4.png",
    "price_old": "",
    "free": false,
+   "sales": "40+",
+   "rating": 4.0,
+   "reviews": 2,
+   "image_hd": "https://assets.superhivemarket.com/store/product/268479/image/xlarge-407452a70b1654d7784f4480ea43991d.png",
+   "age_days": 19,
    "new": true
   },
   {
@@ -67,7 +109,10 @@
    "image": "https://assets.superhivemarket.com/store/product/267751/image/medium-b1514c4649438f99469b7183db877c43.png",
    "price_old": "",
    "free": false,
-   "new": false
+   "sales": "40+",
+   "image_hd": "https://assets.superhivemarket.com/store/product/267751/image/xlarge-de2a51e83ec2e81c6fb43f2b52113795.png",
+   "age_days": 28,
+   "new": true
   },
   {
    "slug": "mechify",
@@ -82,7 +127,12 @@
    "image": "https://assets.superhivemarket.com/store/product/267721/image/medium-52abc67f4a688a3d37c3e0cd6fdd3917.png",
    "price_old": "",
    "free": false,
-   "new": false
+   "sales": "100+",
+   "rating": 3.0,
+   "reviews": 4,
+   "image_hd": "https://assets.superhivemarket.com/store/product/267721/image/xlarge-11c0b69ea275cfaa8d96e6214dbb241b.png",
+   "age_days": 28,
+   "new": true
   },
   {
    "slug": "physics-painter",
@@ -96,8 +146,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/267016/image/medium-742a43e73d37eae78fd468d15f8b9273.png",
    "price_old": "$19",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "split-it",
@@ -111,8 +160,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/266411/image/medium-dfd29fa3d30a1446bac0f286f02cc4f6.png",
    "price_old": "$12",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "10-procedural-cloth-simulation-pack-blender",
@@ -126,8 +174,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/259648/image/medium-9cbef6c9d9f7473bd068a3b52a397444.jpg",
    "price_old": "$16",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "elemental-surface-simulation-pack",
@@ -141,8 +188,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/257605/image/medium-837a6144bc6e8dc2d1ec7f802b4bf57b.jpg",
    "price_old": "$6",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "smart-placer-wood-brick",
@@ -156,8 +202,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/257327/image/medium-0fb57761e3d6923fd587e4a1c82e5034.jpg",
    "price_old": "$9",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "100-ultimate-terrains-bundle",
@@ -171,8 +216,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/257236/image/medium-8e2989f7bde330a744678529309f44f5.png",
    "price_old": "$9.95",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "vdb-elements-pack",
@@ -186,8 +230,7 @@
    "category_slug": "models",
    "image": "https://assets.superhivemarket.com/store/product/256840/image/medium-e4ba099c683197fb652a59be79576ea0.jpg",
    "price_old": "$8.50",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-world-generator",
@@ -201,8 +244,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/256280/image/medium-27ffe349d6ff2c17510e91280a6f5726.jpg",
    "price_old": "$6",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "raymarch-fx-pack",
@@ -216,8 +258,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/255909/image/medium-2008900508f24404cbbc62d1e093115d.jpg",
    "price_old": "$8",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "smart-decal",
@@ -231,8 +272,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/253124/image/medium-1edac0a186ade56d5a702d5f55abab69.jpg",
    "price_old": "$5",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "easy-mat-blend",
@@ -246,8 +286,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/252929/image/medium-05a77eeb1234f6fec6d516c8d4dfc096.jpg",
    "price_old": "$6",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "dynamic-flow-real-time-water-simulation",
@@ -261,8 +300,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/247845/image/medium-1f2a3b408df5cb3c9f7cdc230dbe0650.jpg",
    "price_old": "$8",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "easy-smart-blend",
@@ -276,8 +314,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/247063/image/medium-161b1583a70e3684b22e2a09ddb3b83c.jpg",
    "price_old": "$7",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-volume-simulation-pack",
@@ -291,8 +328,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/246631/image/medium-05e21bd8056f3764f340029db42a26ab.png",
    "price_old": "$9",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "fluid-flow",
@@ -306,8 +342,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/244714/image/medium-fa5c1a4028d432a2300494b4f89bba46.jpg",
    "price_old": "$9",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "50-procedural-generators-addon-v2",
@@ -321,8 +356,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/239710/image/medium-6b21fc5fddb4ebafc3fb0e71be89dcd6.jpg",
    "price_old": "$29",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "ultimate-generators-bundle-v2",
@@ -336,8 +370,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/239105/image/medium-72254edbe2d0c4822fd8e28425606cb7.png",
    "price_old": "$29",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "easy-comp-fx",
@@ -351,8 +384,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/237734/image/medium-4930c8092a506f64532e7c3d7cefdcb8.jpg",
    "price_old": "$9",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "video-depth-ai",
@@ -367,6 +399,11 @@
    "image": "https://assets.superhivemarket.com/store/product/234211/image/medium-9552d75e0ff032aea332fc1b95176d63.jpg",
    "price_old": "$14",
    "free": false,
+   "sales": "900+",
+   "rating": 2.0,
+   "reviews": 12,
+   "image_hd": "https://assets.superhivemarket.com/store/product/234211/image/xlarge-5ac49bfc1a95def4adac1941961db333.jpg",
+   "age_days": 365,
    "new": false
   },
   {
@@ -381,8 +418,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/233464/image/medium-94bc1584b7af4acbe333aa1d91645c27.jpg",
    "price_old": "$6",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "soft-body-painter",
@@ -396,8 +432,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/233342/image/medium-17aed4ef92bd208fae3acfcb497e995b.jpg",
    "price_old": "$6",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "simulation-addons-bundle",
@@ -412,6 +447,11 @@
    "image": "https://assets.superhivemarket.com/store/product/230728/image/medium-2cb9107ef87081242480239c901b5bda.jpg",
    "price_old": "$49",
    "free": false,
+   "sales": "100+",
+   "rating": 1.0,
+   "reviews": 1,
+   "image_hd": "https://assets.superhivemarket.com/store/product/230728/image/xlarge-487a94db7077a418ec8f8ca3b582f86f.jpg",
+   "age_days": 365,
    "new": false
   },
   {
@@ -426,8 +466,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/226932/image/medium-5262161ed8e0b360b8e0491d56f73df2.jpg",
    "price_old": "$6",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "easy-parallax",
@@ -441,8 +480,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/224002/image/medium-6433420ec4b1192ce6714595792bae4d.jpg",
    "price_old": "$7",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "easy-gobo-lights",
@@ -456,8 +494,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/222834/image/medium-473d920ab2e996af58a8eb458a5bc1d3.jpg",
    "price_old": "$7",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "dust-maker",
@@ -471,8 +508,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/222298/image/medium-4728169abaffbe29d118ab4af333780e.jpg",
    "price_old": "$2",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "dynamic-grass",
@@ -486,8 +522,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/221767/image/medium-9c8a928ff75a12377413acf9a9457e20.jpg",
    "price_old": "$6",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "blender-addons-bundle",
@@ -502,6 +537,11 @@
    "image": "https://assets.superhivemarket.com/store/product/221312/image/medium-542bd6484b4038845fc076a5f41d0f1d.jpg",
    "price_old": "$119",
    "free": false,
+   "sales": "400+",
+   "rating": 4.0,
+   "reviews": 7,
+   "image_hd": "https://assets.superhivemarket.com/store/product/221312/image/xlarge-0d29151f8a19a040210c3313dd2176e5.jpg",
+   "age_days": 730,
    "new": false
   },
   {
@@ -516,8 +556,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/220904/image/medium-c9bc8ac82216c1921d0f583c033a5124.jpg",
    "price_old": "$8",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "fluffy-maker",
@@ -532,6 +571,11 @@
    "image": "https://assets.superhivemarket.com/store/product/220528/image/medium-ad24cf30de1d0e4dd7380157b361ce97.jpg",
    "price_old": "$8",
    "free": false,
+   "sales": "700+",
+   "rating": 4.0,
+   "reviews": 12,
+   "image_hd": "https://assets.superhivemarket.com/store/product/220528/image/xlarge-bd6e29783a85272b82291904c6c1e24b.jpg",
+   "age_days": 730,
    "new": false
   },
   {
@@ -547,6 +591,11 @@
    "image": "https://assets.superhivemarket.com/store/product/218108/image/medium-21d4a50272ae47ac5d9ececf3be5a071.jpg",
    "price_old": "$19",
    "free": false,
+   "sales": "800+",
+   "rating": 3.0,
+   "reviews": 22,
+   "image_hd": "https://assets.superhivemarket.com/store/product/218108/image/xlarge-28ef69b4dc2c6d126b812caa41b5ddff.jpg",
+   "age_days": 730,
    "new": false
   },
   {
@@ -562,6 +611,11 @@
    "image": "https://assets.superhivemarket.com/store/product/215479/image/medium-f20ad0de36556145860fd761961da392.jpg",
    "price_old": "$9",
    "free": false,
+   "sales": "1800+",
+   "rating": 3.0,
+   "reviews": 42,
+   "image_hd": "https://assets.superhivemarket.com/store/product/215479/image/xlarge-88d182d7b0fbfc737bf9316778a42da6.jpg",
+   "age_days": 730,
    "new": false
   },
   {
@@ -577,6 +631,11 @@
    "image": "https://assets.superhivemarket.com/store/product/214999/image/a43d8dd44ada5cde123ac8f73b8e7e98.jpg",
    "price_old": "$12",
    "free": false,
+   "sales": "1100+",
+   "rating": 3.0,
+   "reviews": 35,
+   "image_hd": "https://assets.superhivemarket.com/store/product/214999/image/a43d8dd44ada5cde123ac8f73b8e7e98.jpg",
+   "age_days": 730,
    "new": false
   },
   {
@@ -591,8 +650,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/213467/image/8c5d9bed65cbc2465d9238833b995daf.png",
    "price_old": "$29",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-generators-pack-addon",
@@ -606,8 +664,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/209407/image/d418666c34b21c1ec007c93db8fd051c.jpg",
    "price_old": "$29",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "auto-rig-ragdoll-wizard",
@@ -621,8 +678,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/208677/image/082fd67195ecaad5fa8d63288cffbbf6.jpg",
    "price_old": "$19",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "imperfectit-instant-realism",
@@ -636,8 +692,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/205902/image/50e5a860fd1ed4941c0d494f2ab8dcb4.jpg",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "attachify-pro",
@@ -651,8 +706,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/205214/image/1042dc05256749da9fad1605cc2ecc16.jpg",
    "price_old": "$9",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "easy-wake",
@@ -667,6 +721,11 @@
    "image": "https://assets.superhivemarket.com/store/product/203580/image/5cda7bb169e81b8fe29bc24b777bdf15.jpg",
    "price_old": "$14",
    "free": false,
+   "sales": "600+",
+   "rating": 2.0,
+   "reviews": 8,
+   "image_hd": "https://assets.superhivemarket.com/store/product/203580/image/5cda7bb169e81b8fe29bc24b777bdf15.jpg",
+   "age_days": 730,
    "new": false
   },
   {
@@ -681,8 +740,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/203264/image/b8070b573b49aad3361c3520185e8825.png",
    "price_old": "$19",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "blend-fx",
@@ -696,8 +754,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/202750/image/bb1c3962cde57b0d6a5f38430a08aeae.jpg",
    "price_old": "$19",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "aquaflow-pro",
@@ -712,6 +769,11 @@
    "image": "https://assets.superhivemarket.com/store/product/201406/image/299de2656bb1a49c73c037198e5862d1.jpg",
    "price_old": "$19",
    "free": false,
+   "sales": "1200+",
+   "rating": 3.0,
+   "reviews": 15,
+   "image_hd": "https://assets.superhivemarket.com/store/product/201406/image/299de2656bb1a49c73c037198e5862d1.jpg",
+   "age_days": 1095,
    "new": false
   },
   {
@@ -727,6 +789,11 @@
    "image": "https://assets.superhivemarket.com/store/product/200196/image/e2d79d9519ddff3e2bc2775292a929a2.jpg",
    "price_old": "$12.90",
    "free": false,
+   "sales": "1200+",
+   "rating": 2.0,
+   "reviews": 19,
+   "image_hd": "https://assets.superhivemarket.com/store/product/200196/image/e2d79d9519ddff3e2bc2775292a929a2.jpg",
+   "age_days": 1095,
    "new": false
   },
   {
@@ -742,6 +809,11 @@
    "image": "https://assets.superhivemarket.com/store/product/199747/image/bc2799a84339a7bc2e2b8b777bd37b18.jpg",
    "price_old": "$29",
    "free": false,
+   "sales": "800+",
+   "rating": 4.0,
+   "reviews": 9,
+   "image_hd": "https://assets.superhivemarket.com/store/product/199747/image/bc2799a84339a7bc2e2b8b777bd37b18.jpg",
+   "age_days": 1095,
    "new": false
   },
   {
@@ -756,8 +828,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/199037/image/1f282aaf03500b2d7fcb3519f163e518.png",
    "price_old": "$9",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "nanomesh-surface-detail-generator",
@@ -771,8 +842,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/198848/image/40545caa60c2b330a8d25ffcecb2a139.jpg",
    "price_old": "$10",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "explosion-generator",
@@ -786,8 +856,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/197131/image/2d27914cd82c4b7a520c72c4aa0705bd.jpg",
    "price_old": "$12",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "knitting-generator-addon",
@@ -802,6 +871,11 @@
    "image": "https://assets.superhivemarket.com/store/product/196872/image/0f45ccf9ac7be2375ff0301ef35480eb.jpg",
    "price_old": "$9.90",
    "free": false,
+   "sales": "1000+",
+   "rating": 2.0,
+   "reviews": 16,
+   "image_hd": "https://assets.superhivemarket.com/store/product/196872/image/0f45ccf9ac7be2375ff0301ef35480eb.jpg",
+   "age_days": 1095,
    "new": false
   },
   {
@@ -816,8 +890,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/196661/image/ebca9808cfb06c76dae6252bd45da0a0.jpg",
    "price_old": "$7.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "free-snow",
@@ -831,8 +904,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/196161/image/d0c63c827b251966caf1b8eb0fe88323.png",
    "price_old": "",
-   "free": true,
-   "new": false
+   "free": true
   },
   {
    "slug": "curve-fluids",
@@ -847,6 +919,11 @@
    "image": "https://assets.superhivemarket.com/store/product/195913/image/7cf8c1417be8481d567a0d4aa86781f8.jpg",
    "price_old": "$8",
    "free": false,
+   "sales": "700+",
+   "rating": 3.0,
+   "reviews": 4,
+   "image_hd": "https://assets.superhivemarket.com/store/product/195913/image/7cf8c1417be8481d567a0d4aa86781f8.jpg",
+   "age_days": 1095,
    "new": false
   },
   {
@@ -861,8 +938,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/195652/image/a54bdd26ab63494deda501ab715b1622.jpg",
    "price_old": "$3.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-sci-fi-panel-generator",
@@ -876,8 +952,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/195476/image/19caabed76c3f63becb587b226faf052.png",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "medievalgenerators",
@@ -891,8 +966,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/195164/image/b8399cec20d4c4a5b72e59cee6115e22.png",
    "price_old": "",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-medieval-castle-generator",
@@ -906,8 +980,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/190589/image/cae9b7427b0e5d04e735a71a0d3fec3a.jpg",
    "price_old": "$9",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-rock-asset-generator-for-blender",
@@ -921,8 +994,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/190181/image/de934a09fe3bd07a4b9fff95fff52ae0.jpg",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "stylized-city-generator",
@@ -936,8 +1008,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/269351/image/medium-47ca9276386f7aa7b599551fa3d909f0.png",
    "price_old": "$9",
-   "free": false,
-   "new": true
+   "free": false
   },
   {
    "slug": "cyber-city-generator",
@@ -951,8 +1022,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/269342/image/medium-a81a3f3b6e937a75ed290d2f0f509865.webp",
    "price_old": "$9",
-   "free": false,
-   "new": true
+   "free": false
   },
   {
    "slug": "voxel-vfx-3d",
@@ -966,8 +1036,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/268312/image/medium-a33955daa0e6f90a8afd8c7d00c24558.png",
    "price_old": "$14",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "oddlings",
@@ -981,8 +1050,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/268299/image/medium-9357e4edb06ae5901eeea202d955e8bd.jpg",
    "price_old": "$5",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "cellscape",
@@ -996,8 +1064,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/268276/image/medium-0ce6372180a7e90577609c96380bf52a.jpg",
    "price_old": "$14",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "ghost-town-building-generator",
@@ -1011,8 +1078,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/268067/image/medium-b1426c78dbcc9fbaec9f52d192082b06.jpg",
    "price_old": "$7",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "organic-spheres-procedural-materials",
@@ -1026,8 +1092,7 @@
    "category_slug": "surfacing",
    "image": "https://assets.superhivemarket.com/store/product/268054/image/medium-13acc79ee8d8e8b5c5e7c5c38c89f4e3.jpg",
    "price_old": "$4",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "scifi-kitbash-building-generator",
@@ -1041,8 +1106,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/267966/image/medium-d7a99ebb4e259d0b66bed813f6e29b56.jpg",
    "price_old": "$5",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "falling-sand-2d-3d",
@@ -1056,8 +1120,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/267964/image/medium-1f1c263d170882981cd2b954f01d8ce6.png",
    "price_old": "",
-   "free": true,
-   "new": false
+   "free": true
   },
   {
    "slug": "japanese-building-generator",
@@ -1071,8 +1134,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/267963/image/medium-8fe3198354a66ac88621fe533ffb0593.jpg",
    "price_old": "$7",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "auto-uv-unwrap",
@@ -1086,8 +1148,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/267830/image/medium-4dc705f16b9ca84d059bd2f0a46dd718.jpg",
    "price_old": "$3",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "playrig",
@@ -1101,8 +1162,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/267370/image/medium-d7a61060194144a651c55e5a0e2699d4.png",
    "price_old": "",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "elemental-fx-pro",
@@ -1116,8 +1176,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/267189/image/medium-be0dc93e8c61c156ae9033ae8274cab7.jpg",
    "price_old": "$14",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "ivyfig-studio",
@@ -1131,8 +1190,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/267186/image/medium-a2425ea1390ab4bc45a70aa34de9e9a8.png",
    "price_old": "$14",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "fracture-cutter",
@@ -1146,8 +1204,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/266726/image/medium-52184ea642ba875772ec8b39718308f2.png",
    "price_old": "$7",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "fold-box",
@@ -1161,8 +1218,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/266553/image/medium-cb5908414743a71cda0c54371f045f61.jpg",
    "price_old": "$12",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "real-time-soft-body-collision",
@@ -1176,8 +1232,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/263045/image/medium-c73642c09ca6e61b29a73a11a8c17351.jpg",
    "price_old": "",
-   "free": true,
-   "new": false
+   "free": true
   },
   {
    "slug": "lens-lab",
@@ -1191,8 +1246,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/262938/image/medium-1b2838fdc38da9dfc4fde84a5d1424f8.jpg",
    "price_old": "$13",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "50-ultimate-realtime-vfx-sprites",
@@ -1206,8 +1260,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/261530/image/medium-500ad97c9af88f5c4341896574d6cb82.jpg",
    "price_old": "$7",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "ultimate-generators-bundle-v3---asset-library",
@@ -1221,8 +1274,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/260954/image/medium-13bf7aa3d8d0b53d281e688a57323993.jpg",
    "price_old": "$26",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "10-surface-mesh-effects-pack",
@@ -1236,8 +1288,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/259841/image/medium-752499570f0675020767687cba16990f.jpg",
    "price_old": "$9",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "easy-blend-normals",
@@ -1251,8 +1302,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/240962/image/medium-f998c3571069b306ca062ffd4e469ec7.jpg",
    "price_old": "",
-   "free": true,
-   "new": false
+   "free": true
   },
   {
    "slug": "addon-gen",
@@ -1266,8 +1316,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/240867/image/medium-0172f0952a170702e473bb0039152270.jpg",
    "price_old": "$29",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "free-blocks-generator",
@@ -1281,8 +1330,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/233069/image/medium-e3b8d62f32555dfb567f45e39b72abd2.jpg",
    "price_old": "",
-   "free": true,
-   "new": false
+   "free": true
   },
   {
    "slug": "easy-foam-painter",
@@ -1296,8 +1344,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/233067/image/medium-c8ee400946f053303279546b39e5c8e3.jpg",
    "price_old": "$4",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "auto-modeller-pro",
@@ -1311,8 +1358,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/232399/image/medium-f76b27cb8c74188a0fa933ff10136a7d.jpg",
    "price_old": "$6",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "wrinkle-deformer",
@@ -1326,8 +1372,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/220222/image/medium-c6e0ed924787ee68c40b133bc6e8f0bc.jpg",
    "price_old": "$6",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "ai-material-factory",
@@ -1341,8 +1386,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/219850/image/medium-992e05ed36aa5a012fa5f5d3711b2d3f.jpg",
    "price_old": "$9",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "free-addon---trace-generator-from-image",
@@ -1356,8 +1400,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/218395/image/medium-e9202de62357c410b693b1aa8be43d32.jpg",
    "price_old": "",
-   "free": true,
-   "new": false
+   "free": true
   },
   {
    "slug": "easy-hex-tile",
@@ -1371,8 +1414,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/214349/image/24c5990524d0730ab45890629412be23.jpg",
    "price_old": "$7",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "easy-roll",
@@ -1386,8 +1428,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/213928/image/32bc764c3947a00eec08cc92aba0c255.jpg",
    "price_old": "$7",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "trail-gen-blender-addon",
@@ -1401,8 +1442,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/209662/image/1633e8bb5462c92499ae5725837664fc.jpg",
    "price_old": "$7",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "wind-fx",
@@ -1416,8 +1456,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/206604/image/928e7958a13934cb6e09c63a554a1ddb.jpg",
    "price_old": "$6.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "theme-maker",
@@ -1431,8 +1470,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/200486/image/4a87dbfa3dd7775976dfa86543ea7e07.jpg",
    "price_old": "",
-   "free": true,
-   "new": false
+   "free": true
   },
   {
    "slug": "blender-inflate-addon----generate-dynamic-cloth-panels",
@@ -1447,6 +1485,11 @@
    "image": "https://assets.superhivemarket.com/store/product/199497/image/30d289ad2acd683fe73722b03740ae06.jpg",
    "price_old": "$4.90",
    "free": false,
+   "sales": "600+",
+   "rating": 2.0,
+   "reviews": 16,
+   "image_hd": "https://assets.superhivemarket.com/store/product/199497/image/30d289ad2acd683fe73722b03740ae06.jpg",
+   "age_days": 1095,
    "new": false
   },
   {
@@ -1461,8 +1504,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/199208/image/b4afbfcfa41831a15867628158481577.png",
    "price_old": "$8.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "free-addon-autouv",
@@ -1476,8 +1518,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/199174/image/87ab0b4acffa2cf1bae8db0f6057415a.jpg",
    "price_old": "",
-   "free": true,
-   "new": false
+   "free": true
   },
   {
    "slug": "cloth-tool-addon",
@@ -1491,8 +1532,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/198908/image/247fb87271c3ec52e3e5123de51c80e4.jpg",
    "price_old": "$4.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "sci-fi-asset-generator-blender-4",
@@ -1506,8 +1546,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/198548/image/7ad260f7fa78970d27bb5ad786e7b734.jpg",
    "price_old": "",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "constructor",
@@ -1521,8 +1560,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/196779/image/93c1f03d2beabc8a4de3827f7773f517.jpg",
    "price_old": "$6.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "ground-destruction-setup-geometry-nodes-simulation",
@@ -1536,8 +1574,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/196349/image/b031f8cda11db87dadb7c50875d35e28.jpg",
    "price_old": "$3.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "stylized-rock-and-ice-cliff-generator-addon",
@@ -1551,8 +1588,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/195533/image/fd44adf8e76211898bbc7cba2f3b0901.png",
    "price_old": "$4",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "exploded-view",
@@ -1566,8 +1602,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/195130/image/2efe829a75d0b72a751c2cdadd542a34.png",
    "price_old": "$4.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-car-generator",
@@ -1581,8 +1616,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/194783/image/c8af1bdb75ec37ca7b128866e33cad11.png",
    "price_old": "$4.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "cloth-panels",
@@ -1596,8 +1630,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/194612/image/37be4ca63c4be165f985fc68325ff5b5.png",
    "price_old": "",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "crystalize-addon-for-blender",
@@ -1611,8 +1644,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/194587/image/240170f1fa5a50736c674b6865a996e8.png",
    "price_old": "$4.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "one-click-sci-fi",
@@ -1626,8 +1658,7 @@
    "category_slug": "addons",
    "image": "https://assets.superhivemarket.com/store/product/194523/image/90ae7e95a3605c4e5174af5f9a1b63fb.png",
    "price_old": "$8.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "50-future-city-buildings-pack",
@@ -1641,8 +1672,7 @@
    "category_slug": "render-setups",
    "image": "https://assets.superhivemarket.com/store/product/194391/image/29ff3292158c48efa376cf058a9c991a.png",
    "price_old": "$8.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "terrain-blending",
@@ -1656,8 +1686,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/194211/image/7539cc973f5ffe259d8eb3f5d03b0cfc.png",
    "price_old": "$2.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "citygen-for-blender",
@@ -1671,8 +1700,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/194209/image/d535ed164fe14d14f678f000f0d2698e.png",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "blender-tutorial---creating-futuristic-fantasy-island-city-with-blender-geometry-nodes--",
@@ -1686,8 +1714,7 @@
    "category_slug": "training",
    "image": "https://assets.superhivemarket.com/store/product/194204/image/42330b7c38a6b59219841f6bf9fab359.png",
    "price_old": "$8.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "blender---procedural-building-generator",
@@ -1701,8 +1728,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/193602/image/969f28cee9c2b0119d718696411af2e7.jpg",
    "price_old": "$7.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "easy-realistic-snow-generator",
@@ -1716,8 +1742,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/193509/image/f781719ed34458d810043258f56538bd.jpg",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "aircraft-generator",
@@ -1731,8 +1756,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/191713/image/0607b7730204d14d65d326f160937b61.jpg",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-sword-generator-for-blender",
@@ -1746,8 +1770,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/191322/image/af957f54d6918741c155ed360941e705.jpg",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "-procedural-medieval-building-generator-for-blender-",
@@ -1761,8 +1784,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/191001/image/c54ddf4ab98cebf3a3ec8a95f21f763b.jpg",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-lightning-generator-",
@@ -1776,8 +1798,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/190804/image/1695cdc313e7123aff952a95c4d1d056.jpg",
    "price_old": "$1.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-sci-fi-building-generator",
@@ -1791,8 +1812,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/189669/image/a29b806f25e158f9833673a325c8517d.jpg",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-sci-fi-cyberpunk-effect-generator-for-blender",
@@ -1806,8 +1826,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/189322/image/c9302878b7398a36a8a1d7b1ed77b038.png",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-starship-spaceship-generator",
@@ -1821,8 +1840,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/188996/image/4643f1d8541f995758001ee2dc4412d9.jpg",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-sci-fi-city-generator-blender-geometry-nodes",
@@ -1836,8 +1854,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/186303/image/227ec83dc643b4227a4d47f4318375c5.jpg",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-sci-fi-space-station-generator-for-blender",
@@ -1851,8 +1868,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/186167/image/e240214a0440ecbd1bd111416aff73f1.jpg",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-antenna-radar-generator-for-blender-geometry-nodes",
@@ -1866,8 +1882,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/186104/image/4f6045e3449a933c8aab7cd87986878b.jpg",
    "price_old": "$6.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-platform-generator-for-blender",
@@ -1881,8 +1896,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/186008/image/c2a0e822d03955a0516f25642384a8e3.jpg",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-snowflake-generator-for-blender",
@@ -1896,8 +1910,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/185574/image/7dc9ff8707eb590525e4e67145b9f577.jpg",
    "price_old": "$6.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "3d-sci-fi-cyberpunk-city-neon-billboard-pack-for-blender",
@@ -1911,8 +1924,7 @@
    "category_slug": "models",
    "image": "https://assets.superhivemarket.com/store/product/185569/image/68450bfa1365ec6cbf456b095cd00057.jpg",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-crystal-generator-for-blender",
@@ -1926,8 +1938,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/185257/image/2dc9b3e6d09d340778d26e805488666e.jpg",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-ice-generator-for-blender",
@@ -1941,8 +1952,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/177521/image/e030a95506c4940591e46978f46eb6b4.jpg",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-building-generator-for-blender",
@@ -1956,8 +1966,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/177324/image/36d15112d2e4f65379e1162723dfd3c7.jpg",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "sci-fi-cyberpunk-futuristic-city-skyscraper-building-cityscape",
@@ -1971,8 +1980,7 @@
    "category_slug": "models",
    "image": "https://assets.superhivemarket.com/store/product/177313/image/29e51f0bc59b9026b3c9688baba35c8e.png",
    "price_old": "$39",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "procedural-one-click-wire-generator-tool-in-blender",
@@ -1986,8 +1994,7 @@
    "category_slug": "modifier-setups",
    "image": "https://assets.superhivemarket.com/store/product/177298/image/6db7cd07ddc7f4547342071557bbc1e4.jpg",
    "price_old": "$6.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "50-lowpoly-sci-fi-spaceship-kitbash-bundle-pack-package",
@@ -2001,8 +2008,7 @@
    "category_slug": "models",
    "image": "https://assets.superhivemarket.com/store/product/172863/image/c6ab11b0bb59218a7829b7f30807abe4.png",
    "price_old": "$9.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "modular-sci-fi-space-station-blender",
@@ -2016,8 +2022,7 @@
    "category_slug": "models",
    "image": "https://assets.superhivemarket.com/store/product/163572/image/medium-66138708fc2213bdd7973fd87c9d3393.png",
    "price_old": "$39.90",
-   "free": false,
-   "new": false
+   "free": false
   },
   {
    "slug": "80-sci-fi-detailed-hard-surface-texture-material-bundle-pack--",
@@ -2031,8 +2036,7 @@
    "category_slug": "surfacing",
    "image": "https://assets.superhivemarket.com/store/product/163357/image/medium-5a590041d8e7950c2a850b0536cb0356.jpg",
    "price_old": "$6.90",
-   "free": false,
-   "new": false
+   "free": false
   }
  ]
 }
