@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T22:47:48+00:00",
+ "updated": "2026-11-25T14:21:13+00:00",
  "creator": {
   "name": "Blender Procedural",
   "url": "https://superhivemarket.com/creators/pamir-bal",
@@ -45,10 +45,10 @@
   {
    "slug": "lithos-terrain",
    "id": 271297,
-   "title": "Lithos Terrain | GPU Powered Node Based Terrain Generator [80% Off Launch Sale]",
+   "title": "Lithos Terrain | GPU Powered Node Based Terrain Generator [70% Off Launch Sale]",
    "url": "https://superhivemarket.com/products/lithos-terrain",
-   "price": "$3.00-$10.00",
-   "sale": "- 80%",
+   "price": "$4.50-$15.00",
+   "sale": "- 70%",
    "on_sale": true,
    "category": "Addons",
    "category_slug": "addons",
@@ -73,7 +73,7 @@
    "rating": 5.0,
    "reviews": 4,
    "image_hd": "https://assets.superhivemarket.com/store/product/268485/image/xlarge-523615ecb71f084c7ad23cf4200444b3.jpeg",
-   "age_days": 19,
+   "age_days": 20,
    "new": true
   },
   {
@@ -93,7 +93,7 @@
    "rating": 4.0,
    "reviews": 2,
    "image_hd": "https://assets.superhivemarket.com/store/product/268479/image/xlarge-407452a70b1654d7784f4480ea43991d.png",
-   "age_days": 19,
+   "age_days": 20,
    "new": true
   },
   {
@@ -111,7 +111,7 @@
    "free": false,
    "sales": "40+",
    "image_hd": "https://assets.superhivemarket.com/store/product/267751/image/xlarge-de2a51e83ec2e81c6fb43f2b52113795.png",
-   "age_days": 28,
+   "age_days": 29,
    "new": true
   },
   {
@@ -131,7 +131,7 @@
    "rating": 3.0,
    "reviews": 4,
    "image_hd": "https://assets.superhivemarket.com/store/product/267721/image/xlarge-11c0b69ea275cfaa8d96e6214dbb241b.png",
-   "age_days": 28,
+   "age_days": 29,
    "new": true
   },
   {
@@ -561,7 +561,7 @@
   {
    "slug": "fluffy-maker",
    "id": 220528,
-   "title": "Fluffy Maker",
+   "title": "Fluffy Maker (Blender 5.3 Updated)",
    "url": "https://superhivemarket.com/products/fluffy-maker",
    "price": "$5.60",
    "sale": "- 30%",
