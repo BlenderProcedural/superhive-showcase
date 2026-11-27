@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T13:53:30+00:00",
+ "updated": "2026-11-27T13:51:13+00:00",
  "creator": {
   "name": "Blender Procedural",
   "url": "https://superhivemarket.com/creators/pamir-bal",
@@ -45,14 +45,14 @@
   {
    "slug": "lithos-terrain",
    "id": 271297,
-   "title": "Lithos Terrain | GPU Powered Node Based Terrain Generator [70% Off Launch Sale]",
+   "title": "Lithos Terrain | GPU Powered Node Based Terrain Generator [60% Off Launch Sale]",
    "url": "https://superhivemarket.com/products/lithos-terrain",
-   "price": "$4.50-$15.00",
-   "sale": "- 70%",
+   "price": "$6.00-$20.00",
+   "sale": "- 60%",
    "on_sale": true,
    "category": "Addons",
    "category_slug": "addons",
-   "image": "https://assets.superhivemarket.com/store/product/271297/image/medium-b9c850a23bfcc4c767d3363edcb176e1.png",
+   "image": "https://assets.superhivemarket.com/store/product/271297/image/medium-f319ec16488783986d1e95e770a3a4e4.png",
    "price_old": "",
    "free": false
   },
@@ -73,7 +73,7 @@
    "rating": 5.0,
    "reviews": 4,
    "image_hd": "https://assets.superhivemarket.com/store/product/268485/image/xlarge-1645945dad2e99173aa184960f718447.png",
-   "age_days": 21,
+   "age_days": 22,
    "new": true
   },
   {
@@ -89,11 +89,11 @@
    "image": "https://assets.superhivemarket.com/store/product/268479/image/medium-7df21db48ae8d27a0acbd19d85160595.png",
    "price_old": "",
    "free": false,
-   "sales": "40+",
+   "sales": "50+",
    "rating": 4.0,
    "reviews": 2,
    "image_hd": "https://assets.superhivemarket.com/store/product/268479/image/xlarge-068df99463dbc1595837f278ff998520.png",
-   "age_days": 21,
+   "age_days": 22,
    "new": true
   },
   {
@@ -697,7 +697,7 @@
   {
    "slug": "attachify-pro",
    "id": 205214,
-   "title": "Attachify Pro",
+   "title": "Attachify Pro (Blender 5.3 Updated)",
    "url": "https://superhivemarket.com/products/attachify-pro",
    "price": "$3.60",
    "sale": "- 20%",
