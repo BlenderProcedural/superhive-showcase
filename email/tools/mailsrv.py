@@ -2,7 +2,7 @@
 import hashlib, http.server, pathlib, re, sys, urllib.parse, urllib.request
 ROOT = pathlib.Path(__file__).resolve().parent
 SRC, OUT = ROOT / "src", ROOT / "out"
-ALLOWED = ("assets.superhivemarket.com",)
+ALLOWED = ("assets.superhivemarket.com", "blenderprocedural.github.io")
 
 class H(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *a, **k):

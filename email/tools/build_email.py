@@ -16,24 +16,28 @@ BG, CARD, LINE, TEXT, MUTED = "#0b0818", "#15112b", "#2b2350", "#e6e3f3", "#a9a3
 CYAN, MAGENTA, VIOLET, GOLD = "#00e5ff", "#ff2bd6", "#8b5cff", "#ffe14d"
 FONT = "Arial, Helvetica, sans-serif"
 
-CARDS = [  # slug, short name, one line; order = the showcase widget's picks
+CARDS = [  # slug, short name, one line; ordered by sales over the last three months (Sep–Nov 2026)
     ("mechify", "Mechify", "Procedural sci-fi hard-surface for any mesh, in one click."),
     ("ocean-physics-pro", "Ocean Physics Pro", "Drive boats on a real-time ocean with wake, foam and spray."),
     ("vehicle-physics-pro", "Vehicle Physics Pro", "Drive and crash cars in real time, right in the viewport."),
     ("blend-online", "Blend Online", "Edit one Blender scene together in real time, over the internet."),
-    ("autodepth-ai", "AutoDepth AI", "Turn 2D images into 3D with local, offline AI."),
-    ("aquaflow-pro", "Aqua Flow Pro", "Detailed fluid, fire and sand effects with Geometry Nodes."),
-    ("physics-placer", "Physics Placer", "Drop and scatter objects into place with real physics."),
-    ("blenderailibrary", "Blender AI Library Pro", "Text to 3D, image to 3D and text to PBR material."),
-    ("knitting-generator-addon", "Knitting Generator", "A knitted look on any model in one click, no UVs needed."),
-    ("video-depth-ai", "Video Depth AI", "Turn any video into an animated 3D scene."),
+    ("lithos-terrain", "Lithos Terrain", "GPU terrain with real erosion and 135 ready-made terrains."),
+    ("playrig", "PlayRig", "Play your character like an MMO in the viewport, and record the take."),
     ("auto-painter-ai", "Auto Painter AI", "AI texture generation for your 3D models."),
-    ("bp-geogen-ultimate-generators-bundle", "BP GeoGen Generators Bundle", "A bundle of procedural Geometry Nodes generators."),
-    ("fluffy-maker", "Fluffy Maker", "Realistic fur on any object, instantly."),
-    ("curve-fluids", "Curve Fluids", "Real-time procedural liquid simulations."),
+    ("plotwright", "Plotwright 2.0", "Draw a house wall by wall, then furnish, light and shoot it."),
+    ("blenderailibrary", "Blender AI Library Pro", "Text to 3D, image to 3D and text to PBR material."),
+    ("video-depth-ai", "Video Depth AI", "Turn any video into an animated 3D scene."),
     ("easy-wake", "Easy Wake", "Dynamic oceans with realistic ship wakes."),
-    ("blender-inflate-addon----generate-dynamic-cloth-panels", "Blender Inflate", "Generate dynamic, inflated cloth panels."),
+    ("bp-geogen-ultimate-generators-bundle", "BP GeoGen Generators Bundle", "A bundle of procedural Geometry Nodes generators."),
 ]
+# products the showcase data lacks fields for (not in its picks, or newer than the last sync); public numbers
+EXTRA = {
+    "lithos-terrain": {"sales": "100+", "new": True},
+    "playrig": {"sales": "30+", "new": True},
+    "plotwright": {"slug": "plotwright", "price_old": "$13", "price": "$8.45", "sale": "- 35%", "sales": "70+", "new": True, "category": "Addons"},
+}
+for s, extra in EXTRA.items():
+    by.setdefault(s, {}).update(extra)
 
 SHORT = {"blender-inflate-addon----generate-dynamic-cloth-panels": "blender-inflate"}  # Windows path length
 
@@ -132,7 +136,7 @@ content = f"""<div style="background:{BG};color:{TEXT};font-family:{FONT};max-wi
 </td></tr>
 <tr><td style="padding:0 20px;"><a href="{link('blender-addons-bundle')}"><img src="{GIF}bundle.gif" alt="Ultimate Blender Addons Bundle: 106 products, $119 now ${b_now:.2f}" width="560" style="width:100%;max-width:600px;height:auto;display:block;border:0;border-radius:10px;"></a></td></tr>
 <tr><td style="padding:18px 24px 4px;">
-<p style="{P}">One purchase unlocks a 100% off code for <strong style="color:#ffffff;">106 Blender Procedural products</strong>: everything released before the bundle and the add-ons released since, including many of the bestsellers below. That's about {per} per product.</p>
+<p style="{P}">One purchase unlocks a 100% off code for <strong style="color:#ffffff;">106 Blender Procedural products</strong>, including Auto Painter AI, Blender AI Library Pro, Video Depth AI, Easy Wake and the GeoGen generators. That's about {per} per product.</p>
 </td></tr>
 <tr><td align="center" style="padding:4px 24px 6px;font-family:{FONT};">
 <s style="color:{MUTED};font-size:22px;">${b_was:g}</s>&nbsp;&nbsp;<span style="color:#ffffff;font-size:38px;font-weight:bold;">${b_now:.2f}</span>&nbsp;&nbsp;<span style="background-color:{MAGENTA};color:#ffffff;font-size:14px;font-weight:bold;padding:4px 9px;border-radius:12px;vertical-align:middle;">{pct(bundle)}</span>
@@ -143,8 +147,8 @@ content = f"""<div style="background:{BG};color:{TEXT};font-family:{FONT};max-wi
 <tr><td style="padding:0 20px;"><div style="border-top:1px solid {LINE};font-size:0;line-height:0;">&nbsp;</div></td></tr>
 <tr><td style="padding:28px 24px 16px;">
 <p style="{EYEBROW}color:{CYAN};">&#127942; BESTSELLERS</p>
-<h2 style="{H1}font-size:24px;line-height:1.3;margin:0 0 8px;">The add-ons Blender artists buy most</h2>
-<p style="margin:0;font-size:14px;line-height:1.5;color:{MUTED};font-family:{FONT};">Recent hits and all-time favourites, all 35% off. Click a card to open it.</p>
+<h2 style="{H1}font-size:24px;line-height:1.3;margin:0 0 8px;">What Blender artists are buying right now</h2>
+<p style="margin:0;font-size:14px;line-height:1.5;color:{MUTED};font-family:{FONT};">The best sellers of the last three months, all 35% off. Click a card to open it.</p>
 </td></tr>
 <tr><td style="padding:0 20px 8px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
