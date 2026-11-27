@@ -16,6 +16,19 @@ Each product description embeds it with an iframe, so a visitor who opens one pr
 
 Only the products listed in `config.json` are shown. Everything else stays reachable through *Visit the store*.
 
+### Sale mode
+
+When Superhive runs a site-wide sale, the widget switches to sale mode by itself. The sync reads the sale from the
+banner at the top of the store (for example *Cyber Sale now LIVE through 02 Dec!*). Sale mode adds:
+
+- a neon theme;
+- *Cyber Sale is live* above the store name and *35% off everything · ends Dec 2* under it;
+- a days-left counter and a *Shop the sale* button;
+- a sale ribbon on the hero.
+
+The widget returns to normal after the end date, or as soon as the banner is gone. To force a sale, or name one
+the banner doesn't show, add `"event": {"name": "Spring Sale", "ends": "2027-03-05"}` to `config.json`.
+
 ## Embed in a Superhive product description
 
 Paste this at the end of the description in code view. Replace `THIS-PRODUCT-SLUG` with the product's slug, the
@@ -37,8 +50,8 @@ column width. Superhive keeps this style; `height` is only a fallback.
 
 ## How it stays up to date
 
-`.github/workflows/sync.yml` runs `scripts/sync.py` every day and on demand (Actions > *Sync products from
-Superhive* > *Run workflow*). The script:
+`.github/workflows/sync.yml` runs `scripts/sync.py` every 3 hours and on demand (Actions > *Sync products from
+Superhive* > *Run workflow*). A run that finds nothing new commits nothing. The script:
 
 1. reads the public store pages, with no login needed;
 2. takes each product's title, price, sale price, badge, category and image;

@@ -101,14 +101,43 @@ def details(page):
     return out
 
 
+MONTHS = {m: i for i, m in enumerate("jan feb mar apr may jun jul aug sep oct nov dec".split(), 1)}
+
+
+def site_event(page, today):
+    """The site-wide sale banner ("Cyber Sale now LIVE through 02 Dec!") as {name, text, url, ends}, or None."""
+    m = re.search(r'<a class="banner"[^>]*href="([^"]*)"[^>]*>(.*?)</a>', page, re.S)
+    if not m:
+        return None
+    content = re.search(r'banner-content">(.*?)<span class="banner-label"', m.group(2), re.S)
+    line = squash(text(content.group(1) if content else m.group(2)))
+    name = re.search(r"\b((?:[A-Z][A-Za-z]+ )*[A-Z][A-Za-z]+ Sale)\b", line)
+    if not name:
+        return None
+    ev = {"name": name.group(1), "text": line, "url": html.unescape(m.group(1))}
+    d = (re.search(r"(?:through|until|thru|ends?)\s+(\d{1,2})\s+([A-Za-z]{3})", line, re.I)
+         or re.search(r"(?:through|until|thru|ends?)\s+([A-Za-z]{3})[a-z]*\.?\s+(\d{1,2})", line, re.I))
+    if d:
+        a, b = d.groups()
+        day, mon = (int(a), b) if a.isdigit() else (int(b), a)
+        month = MONTHS.get(mon[:3].lower())
+        if month:
+            year = today.year + (1 if month < today.month - 6 else 0)
+            ev["ends"] = datetime.date(year, month, day).isoformat()
+    return ev
+
+
 def main():
     slug = CONFIG["creator_slug"]
-    products, seen, avatar = [], set(), ""
+    products, seen, avatar, event = [], set(), "", None
+    today = datetime.datetime.now(datetime.timezone.utc).date()
     for page in range(1, 40):
         doc = get(f"{BASE}/creators/{slug}?page={page}")
         if not avatar:
             m = re.search(r'<img class="avatar[^"]*"[^>]*src="([^"]+)"', doc)
             avatar = html.unescape(m.group(1)) if m else ""
+        if page == 1:
+            event = CONFIG.get("event") or site_event(doc, today)
         cards = [c for c in parse(doc) if c["slug"] not in seen]
         if not cards:
             break
@@ -122,7 +151,7 @@ def main():
             c["free"] = bool(low) and float(low.group(1).replace(",", "")) == 0.0
             products.append(c)
         time.sleep(1.0)
-    previous, old = 0, {}
+    previous, old, prev = 0, {}, {}
     if OUT.exists():
         try:
             prev = json.loads(OUT.read_text(encoding="utf-8"))
@@ -152,10 +181,15 @@ def main():
         "creator": {"name": CONFIG["creator_name"], "url": f"{BASE}/creators/{slug}", "avatar": avatar,
                     "tagline": CONFIG.get("tagline", "")},
         "count": len(products),
+        "event": event,
         "hero": hero,
         "picks": picks,
         "products": products,
     }
+    # keep the old timestamp when nothing changed, so a frequent schedule doesn't commit (and redeploy) for nothing
+    if prev and {k: v for k, v in prev.items() if k != "updated"} == {k: v for k, v in data.items() if k != "updated"}:
+        print("no changes since the last run")
+        return
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"wrote {len(products)} products to {OUT.relative_to(ROOT)}")

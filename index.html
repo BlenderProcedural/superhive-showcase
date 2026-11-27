@@ -55,6 +55,30 @@
          transition: border-color .25s, transform .2s, background .25s; }
   .btn:hover { border-color: rgba(255,138,61,.6); transform: translateY(-1px); background: var(--panel-2); }
   .btn svg { width: .8rem; height: .8rem; }
+  .acts { display: flex; align-items: center; gap: .45rem; flex: none; }
+  .timer { display: none; align-items: center; gap: .4rem; padding: .45rem .75rem; border-radius: 999px; font-size: .72rem;
+           font-weight: 800; white-space: nowrap; color: var(--accent); background: rgba(0,229,255,.08);
+           border: 1px solid rgba(0,229,255,.4); font-variant-numeric: tabular-nums; }
+  .timer i { width: .45rem; height: .45rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 .6rem var(--accent);
+             animation: blink 1.4s ease-in-out infinite; }
+  @keyframes blink { 50% { opacity: .3; } }
+
+  /* sale mode: on while Superhive runs a site-wide sale (data.event, read from the site banner); off by itself after */
+  :root.sale { --accent: #00e5ff; --accent-2: #ff2bd6; --accent-3: #8b5cff; --gold: #ffe14d; }
+  :root.sale .sc { border-color: rgba(0,229,255,.28); background:
+      linear-gradient(rgba(0,229,255,.05) 1px, transparent 1px) 0 0 / 1.75rem 1.75rem,
+      linear-gradient(90deg, rgba(0,229,255,.05) 1px, transparent 1px) 0 0 / 1.75rem 1.75rem, var(--bg); }
+  :root.sale .sc::before { background: radial-gradient(closest-side, rgba(255,43,214,.28), transparent 70%); }
+  :root.sale .sc::after { background: radial-gradient(closest-side, rgba(0,229,255,.22), transparent 70%); }
+  :root.sale .timer { display: inline-flex; }
+  :root.sale .btn#store { color: #fff; background: var(--grad); border-color: transparent; box-shadow: 0 .35rem 1.2rem rgba(255,43,214,.4); }
+  :root.sale .hero { box-shadow: 0 .8rem 2.4rem rgba(255,43,214,.32), 0 0 1.6rem rgba(0,229,255,.2); }
+  :root.sale .ribbon { box-shadow: 0 .3rem 1rem rgba(255,43,214,.55); }
+  :root.sale .buy { box-shadow: 0 .4rem 1.3rem rgba(255,43,214,.5); }
+  :root.sale .tag.sale, :root.sale .pricing .off { background: linear-gradient(110deg, #ff2bd6, #8b5cff); }
+  :root.sale .pricing .off { font-size: .7rem; padding: .2rem .45rem; box-shadow: 0 0 .9rem rgba(255,43,214,.5); }
+  :root.sale .eyebrow { animation: flicker 5s steps(1) infinite; }
+  @keyframes flicker { 0%, 90%, 94%, 100% { opacity: 1; } 92% { opacity: .3; } 93% { opacity: .85; } }
 
   /* hero: the bundle, big */
   /* 2px gradient frame around a 31rem x 15.5rem (exactly 2:1) image, so the bundle art is never cropped */
@@ -146,10 +170,13 @@
   <header class="top">
     <a class="brand" id="brand" target="_top" rel="noopener">
       <img class="av" id="avatar" alt="">
-      <div><div class="eyebrow">More from the creator</div><b id="cname">Blender Procedural</b><span id="tagline"></span></div>
+      <div><div class="eyebrow" id="eyebrow">More from the creator</div><b id="cname">Blender Procedural</b><span id="tagline"></span></div>
     </a>
-    <a class="btn" id="store" target="_top" rel="noopener">Visit the store
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <div class="acts">
+      <span class="timer" id="timer"><i></i><span id="left"></span></span>
+      <a class="btn" id="store" target="_top" rel="noopener"><span id="storelabel">Visit the store</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    </div>
   </header>
   <section class="hero" id="hero"></section>
   <div class="head">
@@ -187,6 +214,32 @@
   const num = s => { const m = /\$([\d,.]+)/.exec(s || ''); return m ? parseFloat(m[1].replace(/,/g, '')) : NaN; };
   const salesN = p => parseInt(String(p.sales || '').replace(/\D/g, '') || '0', 10);
   const cat = p => esc(NICE[p.category] || p.category);
+
+  // site-wide sale (e.g. "Cyber Sale ... through 02 Dec"): neon look, countdown, sale wording; gone once it ends
+  const ev = data.event;
+  let sale = null;
+  if (ev && ev.name) {
+    const end = ev.ends ? new Date(...ev.ends.split('-').map((v, i) => i === 1 ? v - 1 : +v), 23, 59, 59) : null;
+    if (!end || end > new Date()) {
+      const pct = data.products.map(p => parseInt(String(p.sale).replace(/\D/g, '') || '0', 10));
+      const max = Math.max(0, ...pct);
+      const off = max && pct.every(v => v === max) ? `${max}% off everything` : max ? `Up to ${max}% off` : 'Sale prices';
+      sale = {name: ev.name, end, off};
+    }
+  }
+  if (sale) {
+    document.documentElement.classList.add('sale');
+    $('eyebrow').textContent = `⚡ ${sale.name} is live`;
+    const ends = sale.end ? ` · ends ${sale.end.toLocaleDateString('en-US', {month: 'short', day: 'numeric'})}` : '';
+    $('tagline').textContent = `${sale.off}${ends}`;
+    $('storelabel').textContent = 'Shop the sale';
+    const tick = () => {
+      if (!sale.end) { $('left').textContent = 'Live now'; return; }
+      const d = Math.floor((sale.end - new Date()) / 864e5);
+      $('left').textContent = d >= 2 ? `${d} days left` : d === 1 ? '1 day left' : 'Last day!';
+    };
+    tick(); setInterval(tick, 60000);
+  }
   const goodRating = p => p.rating >= 4 && p.reviews >= 3;   // only show stars that help
 
   // hero: the first configured bundle that is not the page we are on
@@ -205,7 +258,7 @@
       <div class="hero-in">
         <a class="hero-img" href="${esc(hero.url)}" target="_top" rel="noopener">
           <img src="${esc(hero.image_hd || hero.image)}" alt="${esc(hero.title)}" fetchpriority="high">
-          <span class="ribbon">${esc(hero.eyebrow || 'Best value')}</span>
+          <span class="ribbon">${esc(sale ? `⚡ ${sale.name}` : hero.eyebrow || 'Best value')}</span>
         </a>
         <div class="info">
           <h2>${title}</h2>
