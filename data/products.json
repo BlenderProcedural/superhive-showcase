@@ -1,12 +1,12 @@
 {
- "updated": "2026-11-27T16:14:26+00:00",
+ "updated": "2026-11-28T01:29:55+00:00",
  "creator": {
   "name": "Blender Procedural",
   "url": "https://superhivemarket.com/creators/pamir-bal",
   "avatar": "https://assets.superhivemarket.com/store/user/5663967/avatar/thumb-dddf1b9b7e622b22c50ff495f4cab27c.png",
   "tagline": "Procedural generators, physics & VFX add-ons"
  },
- "count": 136,
+ "count": 137,
  "event": {
   "name": "Cyber Sale",
   "text": "Cyber Sale now LIVE through 02 Dec!",
@@ -49,6 +49,20 @@
  ],
  "products": [
   {
+   "slug": "plotwright",
+   "id": 272010,
+   "title": "Plotwright 2.0 | Draw Houses, Then Furnish, Light and Shoot Them (InteriorLab Inside)",
+   "url": "https://superhivemarket.com/products/plotwright",
+   "price": "$18.85-$55.25",
+   "sale": "- 35%",
+   "on_sale": true,
+   "category": "Addons",
+   "category_slug": "addons",
+   "image": "https://assets.superhivemarket.com/store/product/272010/image/medium-f0b6d95f92be4980e2e118491621366d.jpeg",
+   "price_old": "",
+   "free": false
+  },
+  {
    "slug": "lithos-terrain",
    "id": 271297,
    "title": "Lithos Terrain | GPU Powered Node Based Terrain Generator [35% Off Cyber Sale]",
@@ -75,7 +89,7 @@
    "image": "https://assets.superhivemarket.com/store/product/268485/image/medium-babb05993f2a74d47b58e6c589b8c515.png",
    "price_old": "",
    "free": false,
-   "sales": "60+",
+   "sales": "70+",
    "rating": 5.0,
    "reviews": 4,
    "image_hd": "https://assets.superhivemarket.com/store/product/268485/image/xlarge-1645945dad2e99173aa184960f718447.png",
@@ -533,7 +547,7 @@
   {
    "slug": "blender-addons-bundle",
    "id": 221312,
-   "title": "+50 Ultimate Blender Addons Bundle 🌀",
+   "title": "+100 Ultimate Blender Addons Bundle 🌀",
    "url": "https://superhivemarket.com/products/blender-addons-bundle",
    "price": "$77.35",
    "sale": "- 35%",
